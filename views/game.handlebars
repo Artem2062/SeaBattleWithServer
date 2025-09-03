@@ -1,0 +1,80 @@
+<div id="gameContainer" class="game-container">
+  <div class="game-header">
+    <div class="player-info">
+      Ваш ник:
+      <strong>{{nickname}}</strong>
+    </div>
+    <div class="game-status">
+      <span id="gameInfo">Загрузка игры...</span>
+    </div>
+    <div class="player-info">
+      Соперник:
+      <strong id="opponentNickname">Ожидание...</strong>
+    </div>
+  </div>
+
+  <div class="game-turn-timer">
+    Время хода:
+    <span id="turnTimer">--:--</span>
+  </div>
+
+  <div id="fieldContainer" class="field-container">
+    <div class="field mine-field">
+      <h3>Ваше поле</h3>
+      <div id="mineField" class="field-grid">
+        {{#each mineFieldRows}}
+          <div class="fieldLine">
+            {{#each this}}
+              <div class="fieldCell"></div>
+            {{/each}}
+          </div>
+        {{/each}}
+      </div>
+    </div>
+
+    <div class="field enemy-field">
+      <h3>Поле соперника</h3>
+      <div id="enemyField" class="field-grid">
+        {{#each enemyFieldRows}}
+          <div class="fieldLine">
+            {{#each this}}
+              <div class="fieldCell cell-unrevealed"></div>
+            {{/each}}
+          </div>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+  <div
+    id="shipPlacementArea"
+    class="ship-placement-area"
+    style="display: none;"
+  >
+    <div style="margin-top: 10px;">
+      <button id="rotateShipButton" class="button small">Повернуть</button>
+      <span id="orientationDisplay">Горизонтально</span>
+    </div>
+    <h3>Расставьте корабли</h3>
+    <div id="shipContainer" class="ship-container">
+    </div>
+    <button id="submitShips" class="button" disabled>Подтвердить расстановку</button>
+    <button id="resetPlacement" class="button secondary">Сбросить</button>
+  </div>
+  <div class="game-controls">
+    <button
+      id="surrenderButton"
+      class="button warning"
+      style="display: none;"
+    >Сдаться</button>
+  </div>
+  <div class="chat-area">
+    <h3>Чат</h3>
+    <div id="chatMessages" class="chat-messages">
+    </div>
+    <div class="chat-input-area">
+      <input type="text" id="chatInput" placeholder="Введите сообщение..." />
+      <button id="sendChatButton" class="button small">Отправить</button>
+    </div>
+  </div>
+
+</div>
