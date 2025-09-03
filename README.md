@@ -17,7 +17,7 @@
 - **Node.js** — для запуска серверной части проекта  
   [Скачать](https://nodejs.org/)
 
-- **Проект с Github** — для установки проекта на компьютер
+- **Проект с Github** — для установки проекта на компьютер  
   [Скачать](https://github.com/Artem2062/SeaBattleWithServer/archive/refs/heads/main.zip)
 
 ---
@@ -100,3 +100,4 @@ node createAdmin.js
 - `views/` — шаблоны страниц
 
 - `models/` — модели данных (User, Field, Game)
+
